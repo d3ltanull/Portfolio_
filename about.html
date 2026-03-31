@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Me | Денисенко Андрей</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ["Montserrat", "sans-serif"] },
+          colors: { emeraldDark: "#004d40" }
+        }
+      }
+    };
+  </script>
+</head>
+<body class="bg-slate-950 text-slate-100 font-sans antialiased">
+  <header class="sticky top-0 z-40 border-b border-emeraldDark/40 bg-slate-950/85 backdrop-blur">
+    <div class="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-3 px-4 py-4 sm:px-6">
+      <a href="index.html" class="text-base font-semibold tracking-wide text-slate-50">Денисенко Андрей</a>
+      <nav class="flex flex-wrap items-center gap-4 text-sm text-slate-200">
+        <a href="index.html#projects" class="transition hover:text-emerald-300">Проекты</a>
+        <a href="about.html" class="transition hover:text-emerald-300">Обо мне</a>
+        <a href="index.html#contacts" class="transition hover:text-emerald-300">Контакты</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="mx-auto max-w-6xl px-4 py-12 sm:px-6">
+    <section class="grid gap-8 lg:grid-cols-2 lg:items-center">
+      <div class="overflow-hidden rounded-2xl border border-slate-800">
+        <img src="img/My_Photo.png" alt="Фото Андрея Денисенко" class="w-full object-cover">
+      </div>
+      <div>
+        <h1 class="text-3xl font-bold sm:text-4xl">Привет!</h1>
+        <p class="mt-4 text-slate-300">[Bio placeholder] Краткое описание профессионального опыта, подхода к работе и ключевых целей в проектах.</p>
+        <div class="mt-6 rounded-2xl border border-slate-800 bg-slate-900/70 p-5">
+          <h2 class="text-xl font-semibold">Skills</h2>
+          <ul class="mt-3 list-disc space-y-2 pl-5 text-slate-300">
+            <li>[Skill placeholder] UI/UX Design</li>
+            <li>[Skill placeholder] Landing Pages</li>
+            <li>[Skill placeholder] Mobile App Design</li>
+            <li>[Skill placeholder] Branding</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="mt-12">
+      <h2 class="text-2xl font-bold">Pricing</h2>
+      <div class="mt-5 overflow-hidden rounded-2xl border border-slate-800">
+        <table class="w-full border-collapse text-left text-sm sm:text-base">
+          <thead class="bg-slate-900">
+            <tr>
+              <th class="border-b border-slate-800 px-4 py-3">Service</th>
+              <th class="border-b border-slate-800 px-4 py-3">Price</th>
+            </tr>
+          </thead>
+          <tbody class="bg-slate-900/40">
+            <tr><td class="border-b border-slate-800 px-4 py-3">Web Design</td><td class="border-b border-slate-800 px-4 py-3">[price]</td></tr>
+            <tr><td class="border-b border-slate-800 px-4 py-3">Landings</td><td class="border-b border-slate-800 px-4 py-3">[price]</td></tr>
+            <tr><td class="border-b border-slate-800 px-4 py-3">Mobile Apps</td><td class="border-b border-slate-800 px-4 py-3">[price]</td></tr>
+            <tr><td class="border-b border-slate-800 px-4 py-3">Brand Concept</td><td class="border-b border-slate-800 px-4 py-3">[price]</td></tr>
+            <tr><td class="px-4 py-3">Logo Design</td><td class="px-4 py-3">[price]</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
