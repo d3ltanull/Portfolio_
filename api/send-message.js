@@ -61,18 +61,11 @@ module.exports = async (req, res) => {
     });
 
     const tgData = await tgRes.json().catch(() => ({}));
-
+    
     if (!tgRes.ok || !tgData.ok) {
       return res.status(502).json({
         ok: false,
-        debug: {
-          status: tgRes.status,
-          statusText: tgRes.statusText,
-          telegram: tgData,
-          chatId: chatId ? String(chatId).substring(0, 8) + '...' : 'EMPTY',
-          tokenOk: !!token,
-          textLength: text.length
-        }
+        error: "Не удалось отправить в Telegram",
       });
     }
 
