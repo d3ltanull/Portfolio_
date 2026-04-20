@@ -105,6 +105,66 @@
       </div>
     </section>
   </main>
+  <script>
+    (function () {
+      var form = document.getElementById("contact-form");
+      var statusEl = document.getElementById("contact-form-status");
+      var submitBtn = document.getElementById("contact-form-submit");
+      if (!form || !statusEl) return;
+
+      function setStatus(type, text) {
+        statusEl.textContent = text;
+        statusEl.classList.remove("hidden", "text-emerald-400", "text-red-400", "text-slate-400");
+        statusEl.classList.add(
+          type === "ok" ? "text-emerald-400" : type === "err" ? "text-red-400" : "text-slate-400"
+        );
+      }
+
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+        var fd = new FormData(form);
+        var name = (fd.get("name") || "").toString().trim();
+        var email = (fd.get("email") || "").toString().trim();
+        var message = (fd.get("message") || "").toString().trim();
+
+        if (!name || !email || !message) {
+          setStatus("err", "Пожалуйста, заполните все поля.");
+          return;
+        }
+
+        statusEl.classList.add("hidden");
+        submitBtn.disabled = true;
+
+        fetch("/api/send-message", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ name: name, email: email, message: message }),
+        })
+          .then(function (res) {
+            return res.json().then(function (data) {
+              return { ok: res.ok, data: data };
+            });
+          })
+          .then(function (result) {
+            if (result.ok && result.data && result.data.ok) {
+              form.reset();
+              setStatus("ok", "Сообщение отправлено. Спасибо!");
+            } else {
+              var msg =
+                (result.data && result.data.error) ||
+                "Не удалось отправить. Попробуйте позже.";
+              setStatus("err", msg);
+            }
+          })
+          .catch(function () {
+            setStatus("err", "Ошибка сети. Проверьте подключение и попробуйте снова.");
+          })
+          .finally(function () {
+            submitBtn.disabled = false;
+          });
+      });
+    })();
+  </script>
 </body>
 <a href="#" aria-label="Наверх" class="fixed bottom-6 right-6 z-50 inline-flex h-12 w-12 items-center justify-center rounded-full border border-emeraldDark bg-emeraldDark text-lg font-bold text-white shadow-lg transition hover:bg-slate-950 hover:text-emerald-200">
 ↑
