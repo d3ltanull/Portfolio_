@@ -73,23 +73,24 @@
         </table>
       </div>
     </section>
-    <section class="mt-12">
+    <section id="contacts" class="mx-auto max-w-6xl px-4 py-16 sm:px-6">
       <h2 class="text-2xl font-bold sm:text-3xl">Контакты</h2>
       <div class="mt-8 grid gap-8 lg:grid-cols-2">
-        <form class="space-y-4 rounded-2xl border border-slate-800 bg-slate-900/70 p-6">
+        <form id="contact-form" class="space-y-4 rounded-2xl border border-slate-800 bg-slate-900/70 p-6" novalidate>
           <label class="block text-sm text-slate-300">
             Имя
-            <input type="text" class="mt-2 w-full rounded-lg border border-slate-700 bg-slate-950 px-4 py-3 text-slate-100 outline-none transition focus:border-emeraldDark" placeholder="Ваше имя">
+            <input type="text" name="name" required class="mt-2 w-full rounded-lg border border-slate-700 bg-slate-950 px-4 py-3 text-slate-100 outline-none transition focus:border-emeraldDark" placeholder="Ваше имя">
           </label>
           <label class="block text-sm text-slate-300">
             Email
-            <input type="email" class="mt-2 w-full rounded-lg border border-slate-700 bg-slate-950 px-4 py-3 text-slate-100 outline-none transition focus:border-emeraldDark" placeholder="mail@example.com">
+            <input type="email" name="email" required class="mt-2 w-full rounded-lg border border-slate-700 bg-slate-950 px-4 py-3 text-slate-100 outline-none transition focus:border-emeraldDark" placeholder="mail@example.com">
           </label>
           <label class="block text-sm text-slate-300">
             Сообщение
-            <textarea rows="4" class="mt-2 w-full rounded-lg border border-slate-700 bg-slate-950 px-4 py-3 text-slate-100 outline-none transition focus:border-emeraldDark" placeholder="Расскажите о задаче"></textarea>
+            <textarea name="message" rows="4" required class="mt-2 w-full rounded-lg border border-slate-700 bg-slate-950 px-4 py-3 text-slate-100 outline-none transition focus:border-emeraldDark" placeholder="Расскажите о задаче"></textarea>
           </label>
-          <button type="submit" class="rounded-full border border-emeraldDark bg-emeraldDark px-6 py-3 text-sm font-semibold transition hover:bg-transparent hover:text-emerald-200">
+          <p id="contact-form-status" class="hidden text-sm" role="status" aria-live="polite"></p>
+          <button type="submit" id="contact-form-submit" class="rounded-full border border-emeraldDark bg-emeraldDark px-6 py-3 text-sm font-semibold transition hover:bg-transparent hover:text-emerald-200 disabled:cursor-not-allowed disabled:opacity-60">
             Отправить
           </button>
         </form>
