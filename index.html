@@ -162,7 +162,13 @@
       }
 
       form.addEventListener("submit", function (e) {
-        e.preventDefault();
+        e.preventDefault();=
+      
+        if (!form.checkValidity()) {
+          form.reportValidity();
+          return;
+        }
+      
         var fd = new FormData(form);
         var name = (fd.get("name") || "").toString().trim();
         var email = (fd.get("email") || "").toString().trim();
