@@ -63,20 +63,16 @@ module.exports = async (req, res) => {
     const tgData = await tgRes.json().catch(() => ({}));
 
     if (!tgRes.ok || !tgData.ok) {
-      console.log('=== TELEGRAM DEBUG ===');
-      console.log('tgRes.status:', tgRes.status);
-      console.log('tgRes.statusText:', tgRes.statusText);
-      console.log('tgData:', JSON.stringify(tgData, null, 2));
-      console.log('chatId:', chatId);
-      console.log('token starts with:', token?.substring(0, 10) + '...');
-      console.log('===================');
-      
       return res.status(502).json({
         ok: false,
-        error: "Telegram error",
-        status: tgRes.status,
-        description: tgData?.description || 'Unknown',
-        error_code: tgData?.error_code
+        debug: {
+          status: tgRes.status,
+          statusText: tgRes.statusText,
+          telegram: tgData,
+          chatId: chatId ? String(chatId).substring(0, 8) + '...' : 'EMPTY',
+          tokenOk: !!token,
+          textLength: text.length
+        }
       });
     }
 
