@@ -65,7 +65,11 @@ module.exports = async (req, res) => {
     if (!tgRes.ok || !tgData.ok) {
       return res.status(502).json({
         ok: false,
-        error: "Не удалось отправить в Telegram",
+        error: "Telegram error",
+        details: {
+          status: tgRes.status,
+          data: tgData,
+        },
       });
     }
 
