@@ -3,171 +3,126 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About Me | Денисенко Андрей</title>
-  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Профиль — Андрей Денисенко</title>
+  <meta name="description" content="UI/UX и веб-дизайнер: проектирование продуктов, дизайн-системы, интерфейсы и адаптивная реализация.">
+  <meta property="og:title" content="Профиль — Андрей Денисенко">
+  <meta property="og:description" content="UI/UX Designer & Web Designer. Продуктовое проектирование, визуальные системы, веб.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="/img/My_photo.png">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          fontFamily: { sans: ["Montserrat", "sans-serif"] },
-          colors: { emeraldDark: "#004d40" }
-        }
-      }
-    };
-  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,360;1,9..144,500&family=IBM+Plex+Mono:wght@400;500&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
+  <script>document.documentElement.classList.add("js");</script>
 </head>
-<body class="bg-slate-950 text-slate-100 font-sans antialiased">
-  <header class="sticky top-0 z-40 border-b border-emeraldDark/40 bg-slate-950/85 backdrop-blur">
-    <div class="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-3 px-4 py-4 sm:px-6">
-      <a href="index.html" class="text-base font-semibold tracking-wide text-slate-50">Денисенко Андрей</a>
-      <nav class="flex flex-wrap items-center gap-4 text-sm text-slate-200">
-        <a href="index.html#projects" class="transition hover:text-emerald-300">Проекты</a>
-        <a href="about.html" class="transition hover:text-emerald-300">Обо мне</a>
-        <a href="index.html#contacts" class="transition hover:text-emerald-300">Контакты</a>
-      </nav>
-    </div>
+<body>
+  <a class="skip" href="#main">К содержанию</a>
+  <div class="marks" aria-hidden="true"></div>
+  <div class="progress" aria-hidden="true"></div>
+  <div class="cursor" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <a class="brand" href="index.html">
+      <span class="brand-name">Андрей Денисенко</span>
+      <span class="brand-role">UI/UX Designer</span>
+    </a>
+    <nav class="nav" aria-label="Основное меню">
+      <a href="index.html#work">Работы</a>
+      <a href="about.html" aria-current="page">Профиль</a>
+      <a href="index.html#contact">Контакт</a>
+    </nav>
+    <p class="header-status">Открыт к проектам</p>
+    <button class="menu-toggle" type="button" aria-label="Открыть меню" aria-expanded="false"><span></span></button>
   </header>
 
-  <main class="mx-auto max-w-6xl px-4 py-12 sm:px-6">
-    <section class="grid gap-8 lg:grid-cols-2 lg:items-center">
-      <div class="overflow-hidden rounded-2xl border border-slate-800">
-        <img src="img/My_photo.png" alt="Фото Андрея Денисенко" class="w-full object-cover">
-      </div>
+  <main id="main" class="wrap">
+    <section class="case-hero">
       <div>
-        <h1 class="text-3xl font-bold sm:text-4xl">Привет!</h1>
-        <p class="mt-4 text-slate-300">Я занимаюсь проектированием и разработкой цифровых интерфейсов уже более 3-х лет. Мой фокус — создание бесшовного пользовательского опыта на стыке веб-технологий и мобильных платформ. Я не просто рисую макеты или пишу код, я создаю инструменты, которые помогают бизнесу расти, а пользователям — решать их задачи быстрее.</p>
-        <div class="mt-6 rounded-2xl border border-slate-800 bg-slate-900/70 p-5">
-          <h2 class="text-xl font-semibold">Мои навыки</h2>
-          <ul class="mt-3 list-disc space-y-2 pl-5 text-slate-300">
-            <li>UI/UX дизайн мобильных и веб-интерфейсов</li>
-            <li>Разработка сайтов и адаптивная верстка с использованием Tailwind CSS</li>
-            <li>Проектирование мобильных приложений с нуля</li>
-            <li>Создание концепций бренда и визуальной айдентики</li>
-            <li>Разработка уникальных логотипов и векторной графики</li>
-            <li>Интерактивное прототипирование и работа в Figma</li>
-          </ul>
+        <p class="kicker">Profile</p>
+        <h1>UI/UX Designer &amp; Web Designer</h1>
+      </div>
+      <p class="lede" style="margin:0">Проектирую цифровые продукты, пользовательские сценарии и визуальные системы. Соединяю UX-логику, UI и то, как интерфейс собирается на вебе.</p>
+    </section>
+
+    <section class="profile-grid" style="padding-bottom: clamp(3rem, 7vw, 6rem)">
+      <figure class="portrait reveal">
+        <img src="/img/My_photo.png" alt="Андрей Денисенко" width="900" height="1125">
+      </figure>
+      <div>
+        <p class="profile-lead">Мне важен не отдельный экран, а то, как человек проходит продукт: от первого касания до привычного действия.</p>
+        <p class="profile-body">В работе иду от информационной архитектуры и сценариев к компонентам и визуальному языку. Дизайн-система для меня — способ держать продукт цельным: типографика, сетка, отступы, состояния, повторное использование.</p>
+        <p class="profile-body">Техническая сторона не отделена от визуальной. Понимаю HTML, CSS, Tailwind и JavaScript достаточно, чтобы проектировать реализуемые интерфейсы и разговаривать с разработкой на одном языке.</p>
+
+        <div class="timeline">
+          <article class="job">
+            <time datetime="2025-09">Сен 2025 — апр 2026</time>
+            <div>
+              <h3>Компьютерная Академия ТОП — преподаватель UI/UX-дизайна</h3>
+              <p>Обучение проектированию интерфейсов, работе с продвинутыми возможностями Figma, интерактивными прототипами, Variables, Auto Layout, компонентными библиотеками и Atomic Design. Обучение основам веб-вёрстки и адаптивности.</p>
+            </div>
+          </article>
+          <article class="job">
+            <time datetime="2025-06">Июн 2025 — июл 2025</time>
+            <div>
+              <h3>VERSUS — UI/UX Designer / Web Designer</h3>
+              <p>Работа с информационной архитектурой цифрового продукта, объединяющего четыре подразделения. Проектирование структуры страниц и пользовательских сценариев. Разработка единой дизайн-системы с унифицированной типографикой, сетками, отступами и UI-компонентами.</p>
+            </div>
+          </article>
+          <article class="job">
+            <time datetime="2024-11">Ноя 2024 — май 2025</time>
+            <div>
+              <h3>Фриланс — Graphic / Web Designer</h3>
+              <p>Создание визуального контента и веб-макетов для цифровых платформ и маркетинговых задач. Работа с Adobe Creative Cloud и Figma. Создание SVG-спрайтов и гайдлайнов.</p>
+            </div>
+          </article>
         </div>
       </div>
     </section>
 
-    <section class="mt-12">
-      <h2 class="text-2xl font-bold sm:text-3xl">Ценообразование</h2>
-      <div class="mt-5 overflow-hidden rounded-2xl border border-slate-800">
-        <table class="w-full border-collapse text-left text-sm sm:text-base">
-          <thead class="bg-slate-900">
-            <tr>
-              <th class="border-b border-slate-800 px-4 py-3">Услуга</th>
-              <th class="border-b border-slate-800 px-4 py-3">Стоимость</th>
-            </tr>
-          </thead>
-          <tbody class="bg-slate-900/40">
-            <tr><td class="border-b border-slate-800 px-4 py-3">Разработка многостраничного сайта под ключ</td><td class="border-b border-slate-800 px-4 py-3">от 30.000р</td></tr>
-            <tr><td class="border-b border-slate-800 px-4 py-3">Разработка лендинга</td><td class="border-b border-slate-800 px-4 py-3">от 10.000р</td></tr>
-            <tr><td class="border-b border-slate-800 px-4 py-3">Разработка логотипа</td><td class="border-b border-slate-800 px-4 py-3">3.000р</td></tr>
-            <tr><td class="border-b border-slate-800 px-4 py-3">Разработка дизайн-макета мобильного приложения</td><td class="border-b border-slate-800 px-4 py-3">15.000р</td></tr>
-            <tr><td class="px-4 py-3">Разработка контента для social media (цена за пост)</td><td class="px-4 py-3">500р</td></tr>
-          </tbody>
-        </table>
-      </div>
-    </section>
-    <section id="contacts" class="mx-auto max-w-6xl px-4 py-16 sm:px-6">
-      <h2 class="text-2xl font-bold sm:text-3xl">Контакты</h2>
-      <div class="mt-8 grid gap-8 lg:grid-cols-2">
-        <form id="contact-form" class="space-y-4 rounded-2xl border border-slate-800 bg-slate-900/70 p-6" novalidate>
-          <label class="block text-sm text-slate-300">
-            Имя
-            <input type="text" name="name" required class="mt-2 w-full rounded-lg border border-slate-700 bg-slate-950 px-4 py-3 text-slate-100 outline-none transition focus:border-emeraldDark" placeholder="Ваше имя">
-          </label>
-          <label class="block text-sm text-slate-300">
-            Email
-            <input type="email" name="email" required class="mt-2 w-full rounded-lg border border-slate-700 bg-slate-950 px-4 py-3 text-slate-100 outline-none transition focus:border-emeraldDark" placeholder="mail@example.com">
-          </label>
-          <label class="block text-sm text-slate-300">
-            Сообщение
-            <textarea name="message" rows="4" required class="mt-2 w-full rounded-lg border border-slate-700 bg-slate-950 px-4 py-3 text-slate-100 outline-none transition focus:border-emeraldDark" placeholder="Расскажите о задаче"></textarea>
-          </label>
-          <p id="contact-form-status" class="hidden text-sm" role="status" aria-live="polite"></p>
-          <button type="submit" id="contact-form-submit" class="rounded-full border border-emeraldDark bg-emeraldDark px-6 py-3 text-sm font-semibold transition hover:bg-transparent hover:text-emerald-200 disabled:cursor-not-allowed disabled:opacity-60">
-            Отправить
-          </button>
-        </form>
-        <div class="rounded-2xl border border-slate-800 bg-slate-900/70 p-6">
-          <p class="mb-4 text-slate-300">Связаться можно любым удобным способом:</p>
-          <ul class="space-y-3 text-sm sm:text-base">
-            <li><span class="text-slate-400">Тел:</span> <a href="tel:+79112403211" class="text-emerald-300 hover:underline">+7-911-240-32-11</a></li>
-            <li><span class="text-slate-400">TG:</span> <a href="https://t.me/deltanull" target="_blank" rel="noopener noreferrer" class="text-emerald-300 hover:underline">@deltanull</a></li>
-            <li><span class="text-slate-400">VK:</span> <a href="https://vk.com/delta_null" target="_blank" rel="noopener noreferrer" class="text-emerald-300 hover:underline">@delta_null</a></li>
-            <li><span class="text-slate-400">Email:</span> <a href="mailto:koteyko2@bk.ru" class="text-emerald-300 hover:underline">koteyko2@bk.ru</a></li>
-          </ul>
+    <section style="padding-bottom: clamp(3rem, 7vw, 6rem)">
+      <div class="section-head">
+        <div>
+          <p class="kicker">Toolkit</p>
+          <h2 class="h2">Практика</h2>
         </div>
+      </div>
+      <div class="practice" style="margin-top:0">
+        <article>
+          <h3>Product &amp; UX</h3>
+          <ul>
+            <li>User Flows и сценарии</li>
+            <li>Информационная архитектура</li>
+            <li>Проектирование продуктов</li>
+            <li>Прототипирование</li>
+          </ul>
+        </article>
+        <article>
+          <h3>UI &amp; Design Systems</h3>
+          <ul>
+            <li>Визуальные системы</li>
+            <li>Библиотеки компонентов</li>
+            <li>Atomic Design</li>
+            <li>Auto Layout и Variables</li>
+          </ul>
+        </article>
+        <article>
+          <h3>Web &amp; tools</h3>
+          <ul>
+            <li>HTML5, CSS3, Tailwind</li>
+            <li>JavaScript, Git, GitHub</li>
+            <li>Illustrator, Photoshop</li>
+            <li>Blender</li>
+          </ul>
+        </article>
       </div>
     </section>
   </main>
-  <script>
-    (function () {
-      var form = document.getElementById("contact-form");
-      var statusEl = document.getElementById("contact-form-status");
-      var submitBtn = document.getElementById("contact-form-submit");
-      if (!form || !statusEl) return;
 
-      function setStatus(type, text) {
-        statusEl.textContent = text;
-        statusEl.classList.remove("hidden", "text-emerald-400", "text-red-400", "text-slate-400");
-        statusEl.classList.add(
-          type === "ok" ? "text-emerald-400" : type === "err" ? "text-red-400" : "text-slate-400"
-        );
-      }
-
-      form.addEventListener("submit", function (e) {
-        e.preventDefault();
-        var fd = new FormData(form);
-        var name = (fd.get("name") || "").toString().trim();
-        var email = (fd.get("email") || "").toString().trim();
-        var message = (fd.get("message") || "").toString().trim();
-
-        if (!name || !email || !message) {
-          setStatus("err", "Пожалуйста, заполните все поля.");
-          return;
-        }
-
-        statusEl.classList.add("hidden");
-        submitBtn.disabled = true;
-
-        fetch("/api/send-message", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ name: name, email: email, message: message }),
-        })
-          .then(function (res) {
-            return res.json().then(function (data) {
-              return { ok: res.ok, data: data };
-            });
-          })
-          .then(function (result) {
-            if (result.ok && result.data && result.data.ok) {
-              form.reset();
-              setStatus("ok", "Сообщение отправлено. Спасибо!");
-            } else {
-              var msg =
-                (result.data && result.data.error) ||
-                "Не удалось отправить. Попробуйте позже.";
-              setStatus("err", msg);
-            }
-          })
-          .catch(function () {
-            setStatus("err", "Ошибка сети. Проверьте подключение и попробуйте снова.");
-          })
-          .finally(function () {
-            submitBtn.disabled = false;
-          });
-      });
-    })();
-  </script>
+  <footer class="site-footer">
+    <p>© <span data-year>2026</span> Андрей Денисенко</p>
+    <a class="to-top" href="index.html#contact">Контакт</a>
+  </footer>
+  <script type="module" src="js/main.js"></script>
 </body>
-<a href="#" aria-label="Наверх" class="fixed bottom-6 right-6 z-50 inline-flex h-12 w-12 items-center justify-center rounded-full border border-emeraldDark bg-emeraldDark text-lg font-bold text-white shadow-lg transition hover:bg-slate-950 hover:text-emerald-200">
-↑
-</a>
 </html>

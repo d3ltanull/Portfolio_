@@ -3,211 +3,296 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Портфолио | Денисенко Андрей</title>
-  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Андрей Денисенко — UI/UX Designer & Web Designer</title>
+  <meta name="description" content="Портфолио Андрея Денисенко: проектирование цифровых продуктов, пользовательских сценариев и визуальных систем.">
+  <meta property="og:title" content="Андрей Денисенко — UI/UX Designer & Web Designer">
+  <meta property="og:description" content="Цифровые продукты, сценарии и визуальные системы — от структуры интерфейса до визуальной реализации.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="/img/Project_1_mockup.png">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          fontFamily: { sans: ["Montserrat", "sans-serif"] },
-          colors: { emeraldDark: "#004d40" }
-        }
-      }
-    };
-  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,360;1,9..144,500&family=IBM+Plex+Mono:wght@400;500&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
+  <script>document.documentElement.classList.add("js");</script>
 </head>
-<body class="bg-slate-950 text-slate-100 font-sans antialiased">
-  <header class="sticky top-0 z-40 border-b border-emeraldDark/40 bg-slate-950/85 backdrop-blur">
-    <div class="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-3 px-4 py-4 sm:px-6">
-      <a href="index.html" class="text-base font-semibold tracking-wide text-slate-50">Денисенко Андрей</a>
-      <nav class="flex flex-wrap items-center gap-4 text-sm text-slate-200">
-        <a href="index.html#projects" class="transition hover:text-emerald-300">Проекты</a>
-        <a href="about.html" class="transition hover:text-emerald-300">Обо мне</a>
-        <a href="index.html#contacts" class="transition hover:text-emerald-300">Контакты</a>
-      </nav>
-    </div>
+<body>
+  <a class="skip" href="#main">К содержанию</a>
+  <div class="marks" aria-hidden="true"></div>
+  <div class="progress" aria-hidden="true"></div>
+  <div class="cursor" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <a class="brand" href="index.html">
+      <span class="brand-name">Андрей Денисенко</span>
+      <span class="brand-role">UI/UX Designer</span>
+    </a>
+    <nav class="nav" aria-label="Основное меню">
+      <a href="#work">Работы</a>
+      <a href="about.html">Профиль</a>
+      <a href="#contact">Контакт</a>
+    </nav>
+    <p class="header-status">Открыт к проектам</p>
+    <button class="menu-toggle" type="button" aria-label="Открыть меню" aria-expanded="false"><span></span></button>
   </header>
 
-  <main>
-    <section class="relative overflow-hidden border-b border-slate-800">
-      <div class="absolute inset-0 bg-gradient-to-br from-slate-900 via-emeraldDark/45 to-slate-950"></div>
-      <div class="relative mx-auto max-w-6xl px-4 pb-0 sm:px-6">
-        <div class="grid grid-cols-1 gap-10 pt-20 sm:gap-12 sm:pt-28 lg:grid-cols-2 lg:items-end lg:gap-8">
-          <div class="pb-12 lg:pb-16">
-            <h1 class="max-w-4xl text-3xl font-extrabold leading-tight sm:text-5xl">Я — UI/UX дизайнер &amp; исследователь цифровых интерфейсов</h1>
-            <p class="mt-6 max-w-4xl text-base leading-relaxed text-slate-200 sm:text-lg">
-              Создаю функциональные и эстетичные продукты на стыке технологий и дизайна. Обучаясь на 4-м курсе прикладной информатики в СПбГУПТД, я объединяю техническую логику с визуальной эстетикой.
-            </p>
-            <a href="index.html#projects" class="mt-8 inline-flex rounded-full border border-emeraldDark bg-emeraldDark px-6 py-3 text-sm font-semibold text-white transition hover:bg-transparent hover:text-emerald-200">Смотреть проекты</a>
+  <main id="main">
+    <section class="wrap hero">
+      <div class="hero-copy">
+        <p class="hero-meta">
+          <span>Санкт-Петербург</span>
+          <span>UI/UX · Web</span>
+          <span>08 выбранных работ</span>
+        </p>
+        <h1>
+          <span class="line"><span>Проектирую</span></span>
+          <span class="line"><span><em>интерфейсы</em></span></span>
+          <span class="line"><span>и визуальные</span></span>
+          <span class="line"><span>системы</span></span>
+        </h1>
+        <p class="lede">Цифровые продукты, пользовательские сценарии и дизайн-системы. Работаю и со структурой взаимодействия, и с визуальной реализацией.</p>
+        <div class="hero-cta">
+          <a class="link-arrow" href="#work">Смотреть работы <i>→</i></a>
+          <a class="link-arrow" href="https://t.me/deltanull" target="_blank" rel="noopener noreferrer">Telegram <i>↗</i></a>
+        </div>
+      </div>
+
+      <aside class="hero-index" aria-label="Индекс проектов">
+        <p class="hero-index-label">Index / Selected</p>
+        <a class="index-row" href="project-1.html" data-preview="/img/Project_1_mockup.png">
+          <span>01</span><strong>Versus Landing</strong><span>Веб</span>
+        </a>
+        <a class="index-row" href="project-2.html" data-preview="/img/Project_2_mockup.png">
+          <span>02</span><strong>OrniQuest Landing</strong><span>Веб</span>
+        </a>
+        <a class="index-row" href="project-3.html" data-preview="/img/Project_3_mockup.png">
+          <span>03</span><strong>GGQ Landing</strong><span>Веб</span>
+        </a>
+        <a class="index-row" href="project-4.html" data-preview="/img/Project_4_mockup.png">
+          <span>04</span><strong>Vintage Wraps Store</strong><span>Веб</span>
+        </a>
+        <a class="index-row" href="project-5.html" data-preview="/img/Project_5_mockup.png">
+          <span>05</span><strong>ДоброДвиж</strong><span>App</span>
+        </a>
+        <a class="index-row" href="project-6.html" data-preview="/img/Project_6_mockup.png">
+          <span>06</span><strong>DP47 App</strong><span>App</span>
+        </a>
+        <a class="index-row" href="project-7.html" data-preview="/img/Project_7_mockup.png">
+          <span>07</span><strong>Cosmetic App</strong><span>App</span>
+        </a>
+        <a class="index-row" href="project-8.html" data-preview="/img/Project_8_mockup.png">
+          <span>08</span><strong>Phrama App</strong><span>App</span>
+        </a>
+        <div class="preview-well" aria-hidden="true"><img alt=""></div>
+      </aside>
+    </section>
+
+    <section id="work" class="section">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <p class="kicker">Selected work</p>
+            <h2 class="h2">Работы</h2>
           </div>
-          <!-- <div class="flex w-full justify-center leading-none lg:justify-end">
-            <img src="img/My_Photo_1.png" alt="Фото Андрея Денисенко" class="mb-0 block max-h-[min(77vh,35.2rem)] w-auto max-w-full object-contain object-bottom align-bottom outline-none ring-0 [border:0]">
-          </div> -->
+          <p class="kicker">01–08</p>
+        </div>
+
+        <p class="group-label">Веб-сайты &amp; лендинги</p>
+        <div class="web-stack">
+          <article class="project-block reveal">
+            <a class="project-row" href="project-1.html">
+              <span class="project-num">01</span>
+              <div>
+                <div class="project-copy">
+                  <h3>Versus Landing</h3>
+                  <p class="project-meta"><span>Лендинг</span><span>Экосистема</span></p>
+                </div>
+                <div class="well well--wide">
+                  <img src="/img/Project_1_mockup.png" alt="Мокап лендинга Versus" width="1600" height="900">
+                </div>
+              </div>
+            </a>
+          </article>
+
+          <article class="project-block reveal">
+            <a class="project-row" href="project-2.html">
+              <span class="project-num">02</span>
+              <div>
+                <div class="project-copy">
+                  <h3>OrniQuest Landing</h3>
+                  <p class="project-meta"><span>Лендинг</span><span>Продукт</span></p>
+                </div>
+                <div class="well well--wide">
+                  <img src="/img/Project_2_mockup.png" alt="Мокап лендинга OrniQuest" width="1600" height="900" loading="lazy">
+                </div>
+              </div>
+            </a>
+          </article>
+
+          <article class="project-block reveal">
+            <a class="project-row" href="project-3.html">
+              <span class="project-num">03</span>
+              <div>
+                <div class="project-copy">
+                  <h3>GGQ Landing</h3>
+                  <p class="project-meta"><span>Квиз</span><span>Образование</span></p>
+                </div>
+                <div class="well well--wide">
+                  <img src="/img/Project_3_mockup.png" alt="Мокап лендинга GGQ" width="1600" height="900" loading="lazy">
+                </div>
+              </div>
+            </a>
+          </article>
+
+          <article class="project-block reveal">
+            <a class="project-row" href="project-4.html">
+              <span class="project-num">04</span>
+              <div>
+                <div class="project-copy">
+                  <h3>Vintage Wraps Store</h3>
+                  <p class="project-meta"><span>Магазин</span><span>Каталог</span></p>
+                </div>
+                <div class="well well--wide">
+                  <img src="/img/Project_4_mockup.png" alt="Мокап магазина Vintage Wraps" width="1600" height="900" loading="lazy">
+                </div>
+              </div>
+            </a>
+          </article>
+        </div>
+
+        <p class="group-label" style="margin-top: clamp(2.8rem, 7vw, 5.5rem)">Мобильные приложения</p>
+        <div class="phone-grid">
+          <a class="phone-card reveal" href="project-5.html">
+            <span class="project-num">05</span>
+            <div class="well well--phone">
+              <img src="/img/Project_5_mockup.png" alt="Мокап приложения ДоброДвиж" width="800" height="1000" loading="lazy">
+            </div>
+            <div class="project-copy">
+              <h3>ДоброДвиж</h3>
+              <p class="project-meta">Социальное приложение</p>
+            </div>
+          </a>
+          <a class="phone-card reveal" href="project-6.html">
+            <span class="project-num">06</span>
+            <div class="well well--phone">
+              <img src="/img/Project_6_mockup.png" alt="Мокап приложения DP47" width="800" height="1000" loading="lazy">
+            </div>
+            <div class="project-copy">
+              <h3>DP47 App</h3>
+              <p class="project-meta">Онбординг и витрина</p>
+            </div>
+          </a>
+          <a class="phone-card reveal" href="project-7.html">
+            <span class="project-num">07</span>
+            <div class="well well--phone">
+              <img src="/img/Project_7_mockup.png" alt="Мокап косметического приложения" width="800" height="1000" loading="lazy">
+            </div>
+            <div class="project-copy">
+              <h3>Cosmetic App</h3>
+              <p class="project-meta">Бьюти-ритейл</p>
+            </div>
+          </a>
+          <a class="phone-card reveal" href="project-8.html">
+            <span class="project-num">08</span>
+            <div class="well well--phone">
+              <img src="/img/Project_8_mockup.png" alt="Мокап аптечного приложения" width="800" height="1000" loading="lazy">
+            </div>
+            <div class="project-copy">
+              <h3>Phrama App</h3>
+              <p class="project-meta">Аптечные покупки</p>
+            </div>
+          </a>
         </div>
       </div>
     </section>
 
-    <section id="about" class="border-y border-slate-800 bg-slate-900/60">
- 
-    </section>
-
-    <section id="projects" class="mx-auto max-w-6xl px-4 py-16 sm:px-6">
-      <div class="mb-8 flex items-end justify-between gap-4">
-        <h2 class="text-2xl font-bold sm:text-3xl">Проекты</h2>
-        <span class="text-sm text-slate-400">8 кейсов</span>
-      </div>
-
-      <h3 class="mb-4 text-xl font-semibold text-emerald-200">Веб-сайты &amp; Лендинги</h3>
-      <div class="mb-10 grid grid-cols-1 gap-6 md:grid-cols-4">
-        <a href="project-1.html" class="group overflow-hidden rounded-2xl border border-slate-800 bg-slate-900/70 transition hover:border-emeraldDark">
-          <img src="img/Project_1_mockup.png" alt="Project 1" class="h-48 w-full object-cover">
-          <div class="p-4"><h4 class="font-semibold group-hover:text-emerald-300">Versus Landing</h4></div>
-        </a>
-        <a href="project-2.html" class="group overflow-hidden rounded-2xl border border-slate-800 bg-slate-900/70 transition hover:border-emeraldDark">
-          <img src="img/Project_2_mockup.png" alt="Project 2" class="h-48 w-full object-cover">
-          <div class="p-4"><h4 class="font-semibold group-hover:text-emerald-300">OrniQuest Landing</h4></div>
-        </a>
-        <a href="project-3.html" class="group overflow-hidden rounded-2xl border border-slate-800 bg-slate-900/70 transition hover:border-emeraldDark">
-          <img src="img/Project_3_mockup.png" alt="Project 3" class="h-48 w-full object-cover">
-          <div class="p-4"><h4 class="font-semibold group-hover:text-emerald-300">GGQ Landing</h4></div>
-        </a>
-        <a href="project-4.html" class="group overflow-hidden rounded-2xl border border-slate-800 bg-slate-900/70 transition hover:border-emeraldDark">
-          <img src="img/Project_4_mockup.png" alt="Project 4" class="h-48 w-full object-cover">
-          <div class="p-4"><h4 class="font-semibold group-hover:text-emerald-300">Vintage Wraps Store</h4></div>
-        </a>
-      </div>
-
-      <h3 class="mb-4 text-xl font-semibold text-emerald-200">Мобильные приложения</h3>
-      <div class="grid grid-cols-1 gap-6 md:grid-cols-4">
-        <a href="project-5.html" class="group flex flex-col overflow-hidden rounded-2xl border border-slate-800 bg-slate-900/70 transition hover:border-emeraldDark">
-          <div class="flex aspect-[4/5] items-center justify-center bg-slate-900/90 px-3 py-5 sm:aspect-[3/4]">
-            <img src="img/Project_5_mockup.png" alt="Project 5" class="max-h-full w-full object-contain -ml-16 sm:ml-0">
+    <section id="profile" class="section" style="border-top: 1px solid var(--rule)">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <p class="kicker">Practice</p>
+            <h2 class="h2">Как я работаю</h2>
           </div>
-          <div class="p-4"><h4 class="font-semibold group-hover:text-emerald-300">ДоброДвиж</h4></div>
-        </a>
-        <a href="project-6.html" class="group flex flex-col overflow-hidden rounded-2xl border border-slate-800 bg-slate-900/70 transition hover:border-emeraldDark">
-          <div class="flex aspect-[4/5] items-center justify-center bg-slate-900/90 px-3 py-5 sm:aspect-[3/4]">
-            <img src="img/Project_6_mockup.png" alt="Project 6" class="max-h-full w-full object-contain -ml-16 sm:ml-0">
+          <a class="link-arrow" href="about.html">Профиль <i>→</i></a>
+        </div>
+        <div class="profile-grid">
+          <figure class="portrait reveal">
+            <img src="/img/My_photo.png" alt="Андрей Денисенко" width="900" height="1125">
+          </figure>
+          <div>
+            <p class="profile-lead">Сначала логика сценария, затем визуальная система, затем то, как это собирается в интерфейсе.</p>
+            <p class="profile-body">Проектирую цифровые продукты: информационную архитектуру, пользовательские потоки, UI и библиотеки компонентов. Понимаю, как решения в Figma связаны с вёрсткой, адаптивностью и тем, как человек проходит экран за экраном.</p>
+            <div class="practice">
+              <article>
+                <h3>Product &amp; UX</h3>
+                <ul>
+                  <li>User Flows</li>
+                  <li>Информационная архитектура</li>
+                  <li>Прототипы и сценарии</li>
+                </ul>
+              </article>
+              <article>
+                <h3>UI &amp; Systems</h3>
+                <ul>
+                  <li>Дизайн-системы</li>
+                  <li>Atomic Design</li>
+                  <li>Auto Layout, Variables</li>
+                </ul>
+              </article>
+              <article>
+                <h3>Web</h3>
+                <ul>
+                  <li>HTML, CSS, Tailwind</li>
+                  <li>JavaScript, Git</li>
+                  <li>Illustrator, Photoshop, Blender</li>
+                </ul>
+              </article>
+            </div>
           </div>
-          <div class="p-4"><h4 class="font-semibold group-hover:text-emerald-300">DP47 App</h4></div>
-        </a>
-        <a href="project-7.html" class="group flex flex-col overflow-hidden rounded-2xl border border-slate-800 bg-slate-900/70 transition hover:border-emeraldDark">
-          <div class="flex aspect-[4/5] items-center justify-center bg-slate-900/90 px-3 py-5 sm:aspect-[3/4]">
-            <img src="img/Project_7_mockup.png" alt="Project 7" class="max-h-full w-full object-contain -ml-16 sm:ml-0">
-          </div>
-          <div class="p-4"><h4 class="font-semibold group-hover:text-emerald-300">Cosmetic App</h4></div>
-        </a>
-        <a href="project-8.html" class="group flex flex-col overflow-hidden rounded-2xl border border-slate-800 bg-slate-900/70 transition hover:border-emeraldDark">
-          <div class="flex aspect-[4/5] items-center justify-center bg-slate-900/90 px-3 py-5 sm:aspect-[3/4]">
-            <img src="img/Project_8_mockup.png" alt="Project 8" class="max-h-full w-full object-contain -ml-16 sm:ml-0">
-          </div>
-          <div class="p-4"><h4 class="font-semibold group-hover:text-emerald-300">Phrama App</h4></div>
-        </a>
+        </div>
       </div>
     </section>
-    <section id="contacts" class="mx-auto max-w-6xl px-4 py-16 sm:px-6">
-      <h2 class="text-2xl font-bold sm:text-3xl">Контакты</h2>
-      <div class="mt-8 grid gap-8 lg:grid-cols-2">
-        <form id="contact-form" class="space-y-4 rounded-2xl border border-slate-800 bg-slate-900/70 p-6" novalidate>
-          <label class="block text-sm text-slate-300">
-            Имя
-            <input type="text" name="name" required class="mt-2 w-full rounded-lg border border-slate-700 bg-slate-950 px-4 py-3 text-slate-100 outline-none transition focus:border-emeraldDark" placeholder="Ваше имя">
-          </label>
-          <label class="block text-sm text-slate-300">
-            Email
-            <input type="email" name="email" required class="mt-2 w-full rounded-lg border border-slate-700 bg-slate-950 px-4 py-3 text-slate-100 outline-none transition focus:border-emeraldDark" placeholder="mail@example.com">
-          </label>
-          <label class="block text-sm text-slate-300">
-            Сообщение
-            <textarea name="message" rows="4" required class="mt-2 w-full rounded-lg border border-slate-700 bg-slate-950 px-4 py-3 text-slate-100 outline-none transition focus:border-emeraldDark" placeholder="Расскажите о задаче"></textarea>
-          </label>
-          <p id="contact-form-status" class="hidden text-sm" role="status" aria-live="polite"></p>
-          <button type="submit" id="contact-form-submit" class="rounded-full border border-emeraldDark bg-emeraldDark px-6 py-3 text-sm font-semibold transition hover:bg-transparent hover:text-emerald-200 disabled:cursor-not-allowed disabled:opacity-60">
-            Отправить
-          </button>
-        </form>
-        <div class="rounded-2xl border border-slate-800 bg-slate-900/70 p-6">
-          <p class="mb-4 text-slate-300">Связаться можно любым удобным способом:</p>
-          <ul class="space-y-3 text-sm sm:text-base">
-            <li><span class="text-slate-400">Тел:</span> <a href="tel:+79112403211" class="text-emerald-300 hover:underline">+7-911-240-32-11</a></li>
-            <li><span class="text-slate-400">TG:</span> <a href="https://t.me/deltanull" target="_blank" rel="noopener noreferrer" class="text-emerald-300 hover:underline">@deltanull</a></li>
-            <li><span class="text-slate-400">VK:</span> <a href="https://vk.com/delta_null" target="_blank" rel="noopener noreferrer" class="text-emerald-300 hover:underline">@delta_null</a></li>
-            <li><span class="text-slate-400">Email:</span> <a href="mailto:koteyko2@bk.ru" class="text-emerald-300 hover:underline">koteyko2@bk.ru</a></li>
-          </ul>
+
+    <section id="contact" class="section" style="border-top: 1px solid var(--rule)">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <p class="kicker">Contact</p>
+            <h2 class="h2">Связаться</h2>
+          </div>
+        </div>
+        <div class="contact-grid">
+          <div>
+            <p class="profile-body">Если нужен интерфейс, структура продукта или визуальная система — напишите. Удобнее всего в Telegram.</p>
+            <ul class="channels">
+              <li><span>Telegram</span><a href="https://t.me/deltanull" target="_blank" rel="noopener noreferrer">@deltanull</a></li>
+              <li><span>Телефон</span><a href="tel:+79112403211">+7 911 240-32-11</a></li>
+              <li><span>VK</span><a href="https://vk.com/delta_null" target="_blank" rel="noopener noreferrer">@delta_null</a></li>
+              <li><span>Email</span><a href="mailto:koteyko2@bk.ru">koteyko2@bk.ru</a></li>
+            </ul>
+          </div>
+          <form id="contact-form" class="form" novalidate>
+            <label>Имя
+              <input type="text" name="name" required autocomplete="name" placeholder="Как к вам обращаться">
+            </label>
+            <label>Email
+              <input type="email" name="email" required autocomplete="email" placeholder="name@studio.com">
+            </label>
+            <label>Сообщение
+              <textarea name="message" required placeholder="Коротко о задаче, сроках и формате"></textarea>
+            </label>
+            <p id="contact-form-status" class="form-status" role="status" aria-live="polite"></p>
+            <button type="submit" id="contact-form-submit" class="btn">Отправить</button>
+          </form>
         </div>
       </div>
     </section>
   </main>
 
-  <footer class="border-t border-slate-800 py-8 text-center text-sm text-slate-400">
-    <p>© 2026 Денисенко Андрей. Все права защищены.</p>
+  <footer class="site-footer">
+    <p>© <span data-year>2026</span> Андрей Денисенко</p>
+    <a class="to-top" href="#">Наверх</a>
   </footer>
-
-  <script>
-    (function () {
-      var form = document.getElementById("contact-form");
-      var statusEl = document.getElementById("contact-form-status");
-      var submitBtn = document.getElementById("contact-form-submit");
-      if (!form || !statusEl) return;
-
-      function setStatus(type, text) {
-        statusEl.textContent = text;
-        statusEl.classList.remove("hidden", "text-emerald-400", "text-red-400", "text-slate-400");
-        statusEl.classList.add(
-          type === "ok" ? "text-emerald-400" : type === "err" ? "text-red-400" : "text-slate-400"
-        );
-      }
-
-      form.addEventListener("submit", function (e) {
-        e.preventDefault();
-        var fd = new FormData(form);
-        var name = (fd.get("name") || "").toString().trim();
-        var email = (fd.get("email") || "").toString().trim();
-        var message = (fd.get("message") || "").toString().trim();
-
-        if (!name || !email || !message) {
-          setStatus("err", "Пожалуйста, заполните все поля.");
-          return;
-        }
-
-        statusEl.classList.add("hidden");
-        submitBtn.disabled = true;
-
-        fetch("/api/send-message", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ name: name, email: email, message: message }),
-        })
-          .then(function (res) {
-            return res.json().then(function (data) {
-              return { ok: res.ok, data: data };
-            });
-          })
-          .then(function (result) {
-            if (result.ok && result.data && result.data.ok) {
-              form.reset();
-              setStatus("ok", "Сообщение отправлено. Спасибо!");
-            } else {
-              var msg =
-                (result.data && result.data.error) ||
-                "Не удалось отправить. Попробуйте позже.";
-              setStatus("err", msg);
-            }
-          })
-          .catch(function () {
-            setStatus("err", "Ошибка сети. Проверьте подключение и попробуйте снова.");
-          })
-          .finally(function () {
-            submitBtn.disabled = false;
-          });
-      });
-    })();
-  </script>
+  <script type="module" src="js/main.js"></script>
 </body>
-<a href="#" aria-label="Наверх" class="fixed bottom-6 right-6 z-50 inline-flex h-12 w-12 items-center justify-center rounded-full border border-emeraldDark bg-emeraldDark text-lg font-bold text-white shadow-lg transition hover:bg-slate-950 hover:text-emerald-200">
-  ↑
-</a>
 </html>
